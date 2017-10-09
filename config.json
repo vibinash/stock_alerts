@@ -1,0 +1,17 @@
+{
+    "mail": {
+        "to": " <DESTINATION_EMAIL_ADDR> ",
+        "from": " <SOURCE_EMAIL_ADDR> "
+    },
+    "mail_account": {
+        "server": "smtp.mail.yahoo.com",
+        "username": " <USERNAME_FOR_EMAIL> ",
+        "password": " <PASSWORD_FOR_EMAIL> ",
+        "port": 587
+    },
+    "stocks": ["NFLX", "FB"],
+    "alerts": {
+        "NFLX" : 180
+    }
+}
+        
