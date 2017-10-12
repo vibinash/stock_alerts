@@ -1,8 +1,10 @@
+
 import json
 from urllib2 import urlopen
 import re
 import smtplib
 from email.mime.text import MIMEText
+from datetime import datetime
 
 confg = None
 
@@ -41,6 +43,9 @@ def send_email(msg, to, frm):
 
 if __name__ == '__main__':
 
+    print '-------------------------------------'
+    print 'Run Time: ', datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
     # Read the config file
     with open('config.json') as json_config_file:
         confg = json.load(json_config_file)
@@ -72,3 +77,4 @@ if __name__ == '__main__':
             if alert.has_key(symbol) and float(price) <= alert[symbol]:
                 send_alert(symbol, price)
 
+    print '-------------------------------------'
